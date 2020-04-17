@@ -46,3 +46,111 @@
         margin:10px
     }
 }
+
+footer {
+    margin: 40px 0 0;
+    padding: 50px 0;
+    height: auto;
+    background-color: #242F60;
+    background-image: url("../images/waves-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 5% -72%;
+    color: #fff;
+    text-align: left;
+    position: relative;
+}
+
+footer .inner {
+    margin: 0 auto;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    display: block;
+}
+
+footer ul {
+    margin: 0;
+    display: block;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 0;
+    background: none;
+}
+
+footer ul li a {
+    color: #fff;
+    transition: .2s;
+    position: relative;
+    top: 0;
+}
+
+footer ul li a:hover {
+    text-decoration: none;
+    top: -2px;
+    color: #b3b3b3;
+}
+
+footer ul li a:visited {
+    color: #fff;
+}
+
+footer .footer-links-list, footer .footer-info-list {
+    margin-bottom: 20px;
+}
+
+footer .footer-links-list li::after, footer .footer-info-list li::after {
+    content: "|";
+    margin-left: 5px;
+}
+
+footer .footer-links-list li:last-child::after, footer .footer-info-list li:last-child::after {
+    display: none;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #CAD401;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background .3s, opacity .6s;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+}
+
+.scroll-top-btn svg path {
+    stroke: #242F60;
+    fill: #242F60;
+    transition: stroke .3s, fill .3s;
+}
+
+.scroll-top-btn:hover {
+    background: #242F60;
+}
+
+.scroll-top-btn:hover svg path {
+    stroke: #fff;
+    fill: #fff;
+}
