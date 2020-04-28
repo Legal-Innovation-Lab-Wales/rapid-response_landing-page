@@ -23,23 +23,24 @@
     <meta name="msapplication-config"
           content="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/browserconfig.xml">
     <meta name="theme-color" content="#242F60">
+
     <!-- Custom built theme - This already includes Bootstrap 4 -->
     <link rel="stylesheet" href="https://intranet.swan.ac.uk/cdn/suds/css/suds.min.css">
-    <!--add cdn reference  use intranettest.swan.ac.uk for testing -->
-    <!-- include if date picker being used 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    -->
+
     <!-- Custom Legal Innovation Lab CSS -->
     <link rel="stylesheet" href="assets/css/lilw-custom.css">
+    <!-- Custom Legal Innovation Lab JS -->
+    <script src="assets/js/lilw-custom.js"></script>
+
 
 </head>
-<body>
+<body class="english-lang">
 <header>
     <h1 class="a11y-hidden">Placeholder Title</h1>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-logo university-logo" href="">
+        <div class="container">
+            <a class="navbar-logo university-logo" href="https://swansea.ac.uk">
                 <picture>
                     <source srcset="https://intranet.swan.ac.uk/cdn/suds/images/logo/application-custom/logo-white-en.svg"
                             type="image/svg+xml">
@@ -49,13 +50,18 @@
                 </picture>
             </a>
 <!--            <a class="navbar-brand navbar-brand-fluid" href="#">Legal Innovation Lab Wales</a>-->
-            <a class="navbar-logo lilw-logo" href="">
+            <a class="navbar-logo lilw-logo" href="https://legaltech.wales">
                 <picture>
                     <img alt="Legal Innovation Lab Wales"
                          src="assets/images/lilw-logo-white.png">
                 </picture>
             </a>
+
         </div>
+        <h3>
+            <button class="float-right btn btn-sm btn-secondary btn-rounded" onclick="toggleLanguageMode()">Toggle Welsh
+            </button>
+        </h3>
         <!-- <div class="navbar-collapse collapse" id="navbarTogglerDemo02" style=""></div> -->
     </nav>
 </header>
@@ -63,12 +69,12 @@
 <main id="main">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-sm-0 col-md-2"></div>
+            <div id="english-lang" class="english-lang col-sm-12 col-md-8">
                 <h1 class="title text-center "><strong>Placeholder Title</strong></h1>
-                <h2 class="title text-center "><strong>What does this do? Helping find info about parental leave</strong></h2>
+                <h2 class="title text-center "><strong>Discover if you are likely to be eligible for unpaid parental leave</strong></h2>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary-alt">Link to the thing</button>
+                    <button type="button" class="btn btn-primary-alt">Get Advice Now</button>
 <!--                    <button type="button" class="btn btn-primary">Link to More info</button>
                     <button type="button" class="btn btn-info">Link to FAQ</button>-->
                 </div><br>
@@ -113,92 +119,68 @@
                 <p>It is recognised that there are many other areas of law that people may need help with, therefore this page may be expanded to other subject areas at a later date – so watch this space!</p>
 
             </div>
-        </div>
-        <div class="row quick-links">
-            <!--SUDS-->
-            <!-- <div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://intranet.swan.ac.uk/suds/">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-drafting-compass sr-icons"></i>
-                        <h3>SUDS</h3>
-                        <p>Swansea University Design System, information about the design language the university uses for software products.</p>
-                    </div>
-                </a>
-            </div> -->
-            <!--END SUDS-->
-            <!--UXPIN-->
-            <!-- <div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://app.uxpin.com/design-system/ec0a7b2451bf6653f580/suds-software-university-design-system">
-					<div class="link-box">
-                        <i class="fa fa-4x fa-code sr-icons"></i>
-                        <h3>SUDS - UXPin</h3>
-                        <p>Resources and components to make building front end systems that bit quicker and easier hosted on UXPin.</p>
-                    </div>
-                </a>
-            </div> -->
-            <!--END UXPIN-->
-            <!--GIT HUB-->
-            <!-- <div class="col-lg-4  col-sm-6 text-center">
-                <a href="https://github.com/Legal-Innovation-Lab-Wales">
-                    <div class="link-box">
-                        <i class="fab fa-4x fa-github sr-icons"></i>
-                        <h3>GitHub</h3>
-                        <p>Various projects and resources will live here in the future, at the moment its just the code for this page!</p>
-                    </div>
-                </a>
-            </div> -->
-            <!--END GIT HUB-->
-            <!--STATUS-->
-            <!--<div class="col-lg-4 col-sm-6 text-center">
-                <a href="http://status.veeqo.com/">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-server sr-icons"></i>
-                        <h3>Status</h3>
-                        <p>Check the status of Veeqo. Including the API, the core app and integrations.</p>
-                    </div>
-                </a>
-            </div>-->
-            <!--END STATUS-->
-            <!--APP STORE-->
-            <!--<div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://marketplace.veeqo.com">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-shopping-bag sr-icons"></i>
-                        <h3>Marketplace</h3>
-                        <p>Get your app listed on the Veeqo app store or see what's already been made.</p>
-                    </div>
-                </a>
-            </div>-->
-            <!--END APP STORE-->
-            <!--SIGN UP-->
-            <!-- <div class="col-lg-4 col-sm-6 text-center">
-                 <a href="https://app.veeqo.com/register">
-                     <div class="link-box">
-                         <i class="fa fa-4x fa-pencil-square-o sr-icons"></i>
-                         <h3>Sign Up</h3>
-                         <p>Built an app and need to test it? Register for a Veeqo developer account.</p>
-                     </div>
-                 </a>
-             </div>-->
-            <!--END SIGN UP-->
+            <div id="welsh-lang" class="welsh-lang hidden col-sm-12 col-md-8 ">
+                <h1 class="title text-center "><strong>Welsh Title</strong></h1>
+                <h2 class="title text-center "><strong>Welsh Subtitle goes here, something about the project</strong></h2>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary-alt">Welsh Button</button>
+                    <!--                    <button type="button" class="btn btn-primary">Link to More info</button>
+                                        <button type="button" class="btn btn-info">Link to FAQ</button>-->
+                </div><br>
+                <div class="text-center">
+                    <!--                    <button type="button" class="btn btn-primary-alt">Link to the thing</button>
+                                        <button type="button" class="btn btn-primary">Link to More info</button>-->
+                    <button type="button" class="btn btn-info">Welsh FAQs</button>
+                </div>
 
+                <h4 class="text-center">Welsh Background</h4>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+                <p>In dolor nunc, varius ut aliquet sed, consectetur sit amet lectus. Morbi dictum ligula porttitor metus pellentesque, vel rutrum arcu rhoncus. Phasellus volutpat ullamcorper rutrum. Nunc interdum tincidunt augue, quis accumsan nisi blandit vel. Nulla quis magna elementum nibh porta imperdiet. Quisque lectus nisi, porta vitae elit eget, mattis maximus augue. In pellentesque libero ac orci blandit rhoncus. In viverra vitae odio vitae semper. Nulla euismod laoreet luctus. Sed mauris felis, varius ut ex et, convallis cursus nibh. Nullam et turpis et ligula porta semper. Duis augue eros, ultrices sit amet ipsum vitae, consequat gravida leo.</p>
+
+                <p> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <ul>
+                    <li>Ut at faucibus felis. Phasellus scelerisque lectus eget sapien euismod viverra;
+                    </li>
+
+                    <li>Etiam condimentum enim in aliquam semper. Curabitur sed sem justo;
+                    </li>
+
+                    <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque porta tortor at convallis pulvinar. Duis consequat nunc sed eros facilisis feugiat..
+                    </li>
+                </ul>
+                <h4 class="text-center">Nam sagittis elit vitae nisi blandit, sed tempus diam auctor.</h4>
+                <p>Pellentesque suscipit, enim a lobortis elementum, urna dolor pellentesque nulla, vitae suscipit leo erat ac justo. Vivamus fringilla lacinia ligula, et interdum ligula. Nunc ligula turpis, malesuada in nisi ac, vestibulum faucibus risus. Praesent cursus euismod enim at congue. Suspendisse molestie erat neque, sed viverra erat blandit eget. Sed posuere diam quis ante dapibus tempor in et dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+                <p>In non dictum arcu. Phasellus ut lorem et elit egestas molestie eu in mauris. Proin rutrum feugiat massa in vulputate. Curabitur consectetur interdum enim. Nam nec leo sit amet tortor accumsan gravida sit amet id metus. Nunc iaculis neque vitae pulvinar sagittis.</p>
+
+            </div>
         </div>
+
     </div>
 </main>
 
 <footer>
     <div class="main">
-        <div class="scroll-top-btn visible">
+        <!--<div class="scroll-top-btn visible">
             <svg width="15" height="19" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <path d="M7.20515673,0.442955118 C7.01071075,0.450858935 6.82557512,0.530967566 6.68382717,0.668535665 L0.764214123,6.49892519 C0.535172672,6.69838728 0.432075553,7.01236005 0.496442985,7.3143975 C0.560810417,7.61643496 0.782046893,7.85681878 1.07105403,7.93873939 C1.36006116,8.02066 1.66926555,7.93063246 1.87414157,7.7049135 L6.43157093,3.21933108 L6.43157093,18.1552245 C6.42745388,18.4556027 6.58040235,18.7349995 6.8318494,18.8864284 C7.08329644,19.0378572 7.39428535,19.0378572 7.64573239,18.8864284 C7.89717944,18.7349995 8.05012791,18.4556027 8.04601086,18.1552245 L8.04601086,3.21933108 L12.6034402,7.7049135 C12.8083162,7.93063246 13.1175206,8.02066 13.4065278,7.93873939 C13.6955349,7.85681878 13.9167714,7.61643496 13.9811388,7.3143975 C14.0455062,7.01236005 13.9424091,6.69838728 13.7133677,6.49892519 L7.79375462,0.668535665 C7.63509362,0.514470745 7.4228184,0.433116121 7.20515673,0.442955118 Z"></path>
             </svg>
-        </div>
+        </div>-->
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="footer-links-info">
                         <ul class="footer-links-list">
-                            <li class="footer-links-list-item"><a href="/contact-us/">Contact Us</a></li><li class="footer-links-list-item"><a href="/jobs-at-swansea/">Jobs</a></li><li class="footer-links-list-item"><a href="/the-university/colleges/">Colleges</a></li><li class="footer-links-list-item"><a href="/press-office/">Press</a></li><li class="footer-links-list-item"><a href="/about-us/safety-and-security/health-and-safety/">Health &amp; Safety</a></li><li class="footer-links-list-item"><a href="/disclaimer-and-copyright/">Disclaimer &amp; Copyright</a></li><li class="footer-links-list-item"><a href="/system/site-map/">Site Map</a></li><li class="footer-links-list-item"><a href="/privacyandcookies/">Privacy &amp; Cookies</a></li><li class="footer-links-list-item"><a href="/media/Modern-Slavery-Statement.pdf">Modern Slavery Statement</a></li><li class="footer-links-list-item"><a href="/the-university/accessibility/swansea-ac-uk/">Accessibility Statement</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/contact-us/">Contact Us</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/jobs-at-swansea/">Jobs</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/the-university/colleges/">Colleges</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/press-office/">Press</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/about-us/safety-and-security/health-and-safety/">Health &amp; Safety</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/disclaimer-and-copyright/">Disclaimer &amp; Copyright</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/privacyandcookies/">Privacy &amp; Cookies</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/media/Modern-Slavery-Statement.pdf">Modern Slavery Statement</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/the-university/accessibility/swansea-ac-uk/">Accessibility Statement</a></li>
                         </ul>
                         <ul class="footer-info-list">
                             <li class="footer-info-list-item">Swansea University is a registered charity, No. 1138342</li>
@@ -246,7 +228,7 @@
         <div class="row">
             <div class="col">
                 <img src="assets/images/su-logo-blue-2x.png" alt="Swansea University">
-                <img src="assets/images/lilw-logo.png" alt="Legal Innovation Lab Wales">
+                <img src="assets/images/lilw-logo-blue.png" alt="Legal Innovation Lab Wales">
                 <img class="erdf" src="assets/images/erdf.png" alt="European Regional Development Fund">
             </div>
         </div>
@@ -267,20 +249,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-<!-- include if following js date picker being used
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
--->
-<script src="js/suds.js"></script>
-
-
-<script>
-    /* Call datepicker in your JS as follows if being used
-    (function ($) {
-        $('#datepicker').datepicker();
-    })(jQuery);
-    */
-</script>
 
 
 </body>

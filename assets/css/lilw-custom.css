@@ -38,6 +38,16 @@
 
 /*
 ***
+* General CSS
+***
+ */
+
+.hidden{
+    display: none;
+}
+
+/*
+***
 * QUICK LINK BOXES
 ***
 */
